@@ -1,0 +1,41 @@
+.vdo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(255, 122, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.vdo-container .close {
+    position: absolute;
+    top: 10%;
+    right: 25px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.vdo-container video {
+    width: 90%;
+    max-width: 800px;
+    transform: scale(0);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+    transition: all 0.4s;
+}
+
+.vdo-container .show {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.vdo-container .show video {
+    transform: scale(1);
+}
